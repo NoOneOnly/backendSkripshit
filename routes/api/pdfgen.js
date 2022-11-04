@@ -6,7 +6,7 @@ const verifyRoles = require('../../middleware/verifyRoles');
 
 router.route('/')
     .get(pdfgenController.getAllPdfs)
-    .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), pdfgenController.createNewPdf)
+    .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor, ROLES_LIST.User), pdfgenController.createNewPdf)
 
 
 

@@ -6,7 +6,7 @@ const verifyRoles = require('../../middleware/verifyRoles');
 
 router.route('/')
     .get(klausul9Controller.getAllKlausul9)
-    .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor), klausul9Controller.createNewKlausul9)
+    .post(verifyRoles(ROLES_LIST.Admin, ROLES_LIST.Editor, ROLES_LIST.User), klausul9Controller.createNewKlausul9)
 
 
 
